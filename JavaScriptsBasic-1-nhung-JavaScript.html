@@ -12,8 +12,42 @@
 <button type="button" onclick="showMessages();">Button Div</button>
 <button type="button" onclick="showMessage1();">Button Doc</button>
 <button type="button" onclick="showMessage2();">Button Console</button>
-<button type="button" onclick="showvar();">Button show var</button>
-<button type="button" onclick="showarea();">Button show area</button>
+<button type="button" onclick="showVar();">Button show var</button>
+<button type="button" onclick="showArea();">Button show area</button>
+<button type="button" onclick="phepChia()">Phép chia</button> <br>
+<div style="float: left; width: 600px; height: 100px">
+    <form id="form1"  action="#">
+        <table style="width: 100%">
+            <tr>
+                <td align="center">Amount</td>
+                <td align="center">From Currency</td>
+                <td align="center">To Currency</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="center"><input type="text" name="amount" value=""></td>
+                <td align="center">
+                    <select name="tienTe">
+                        <option value="17000">VNĐ</option>
+                        <option value="22000">USD</option>
+                        <option value="220">JPY</option>
+                    </select>
+                </td>
+                <td align="center">
+                    <select name="tiendoi">
+                        <option value="17000">VNĐ</option>
+                        <option value="22000">USD</option>
+                        <option value="220">JPY</option>
+                    </select>
+                </td>
+                <td align="center">
+                    <button type="button" onclick="chuyenTien()" style="background-color: purple">Convert</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <p id="tienchuyen"></p>
+</div>
 <script src="nhung-JavaScripts.js"></script>
 </body>
 </html>
