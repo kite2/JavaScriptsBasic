@@ -20,7 +20,7 @@ var s = "Ha Noi";
 function showVar() {
     document.write('i=' +i);
     document.write("<br/>");
-    document.write('f=' +f)
+    document.write('f=' +f);
     document.write("<br/>");
     document.write('b=' +b);
     document.write("<br/>");
@@ -36,17 +36,49 @@ function showArea() {
     document.write("<br/>");
     document.write('height=' +height);
 }
-function phepChia() {
+function phepChiaDu() {
     var a = prompt("Nhập số thứ 1 vào");
     var b = prompt("Nhập số thứ 2 vào");
     alert("a chia b có dư là" +' '+a%b)
 }
 
 function chuyenTien() {
-    var tien1= document.getElementById('form1').elements.item(0).value;
-    var tien2= document.getElementById('form1').elements.item(1).value;
-    var tien3= document.getElementById('form1').elements.item(2).value;
-    var tien4= tien1*tien3;
-    document.getElementById('tienchuyen').innerHTML = tien4;
+    var amount= document.getElementById('amount').value;
+    var fromCurrency= document.getElementById('fCurrency').value;
+    var toCurrency= document.getElementById('tCurrency').value;
+    var inTien= amount*toCurrency;
+    document.getElementById('tienchuyen').innerHTML = inTien;
 }
 
+
+function phepCong() {
+    var soThu1= parseInt(document.getElementById('soThu1').value);
+    var soThu2= parseInt(document.getElementById('soThu2').value);
+    var ketQua;
+    ketQua = soThu1 + soThu2;
+    document.getElementById('inKetQua').innerHTML="Result Addition: "+ ketQua;
+}
+
+function phepTru() {
+    var soThu1= parseInt(document.getElementById('soThu1').value);
+    var soThu2= parseInt(document.getElementById('soThu2').value);
+    var ketQua;
+    ketQua = soThu1 - soThu2;
+    document.getElementById('inKetQua').innerHTML="Result Subtraction: "+ ketQua;
+}
+
+function phepChiaHet() {
+    var soThu1= parseInt(document.getElementById('soThu1').value);
+    var soThu2= parseInt(document.getElementById('soThu2').value);
+    var ketQua;
+    ketQua = soThu1 / soThu2;
+    document.getElementById('inKetQua').innerHTML="Result Division: "+ ketQua;
+}
+
+function phepNhan() {
+    var soThu1= parseInt(document.getElementById('soThu1').value);
+    var soThu2= parseInt(document.getElementById('soThu2').value);
+    var ketQua;
+    ketQua = soThu1 * soThu2;
+    document.getElementById('inKetQua').innerHTML="Result Multiplication: "+ ketQua;
+}

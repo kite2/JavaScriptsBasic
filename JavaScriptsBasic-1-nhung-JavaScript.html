@@ -14,7 +14,7 @@
 <button type="button" onclick="showMessage2();">Button Console</button>
 <button type="button" onclick="showVar();">Button show var</button>
 <button type="button" onclick="showArea();">Button show area</button>
-<button type="button" onclick="phepChia()">Phép chia</button> <br>
+<button type="button" onclick="phepChiaDu()">Phép chia</button> <br>
 <div style="float: left; width: 600px; height: 100px">
     <form id="form1"  action="#">
         <table style="width: 100%">
@@ -25,18 +25,18 @@
                 <td></td>
             </tr>
             <tr>
-                <td align="center"><input type="text" name="amount" value=""></td>
+                <td align="center"><input id="amount" placeholder="Nhập số" type="number" name="amount" value=""></td>
                 <td align="center">
-                    <select name="tienTe">
-                        <option value="17000">VNĐ</option>
-                        <option value="22000">USD</option>
+                    <select id="fCurrency" name="tienTe">
+                        <option value="22000">VNĐ</option>
+                        <option value="1">USD</option>
                         <option value="220">JPY</option>
                     </select>
                 </td>
                 <td align="center">
-                    <select name="tiendoi">
-                        <option value="17000">VNĐ</option>
-                        <option value="22000">USD</option>
+                    <select id="tCurrency" name="tiendoi">
+                        <option value="22000">VNĐ</option>
+                        <option value="1">USD</option>
                         <option value="220">JPY</option>
                     </select>
                 </td>
@@ -47,6 +47,36 @@
         </table>
     </form>
     <p id="tienchuyen"></p>
+</div>
+<div style="width: 600px; height: 200px">
+    <h3>Máy tính</h3>
+    <form action="#">
+        <table style="width: 100%">
+            <tr>
+                <td colspan="2">
+                    <input id="soThu1" type="number" value="" placeholder="Nhập số thứ 1" name="soThu1">
+                </td>
+                <td colspan="2">
+                    <input id="soThu2" type="number" value="" placeholder="Nhập số thứ 2" name="soThu2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="phepCong()">Addition(+)</button>
+                </td>
+                <td>
+                    <button type="button" onclick="phepTru()">Subtraction(-)</button>
+                </td>
+                <td>
+                    <button type="button" onclick="phepNhan()">Multiplication(*)</button>
+                </td>
+                <td>
+                    <button type="button" onclick="phepChiaHet()">Division(/)</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <p id="inKetQua"></p>
 </div>
 <script src="nhung-JavaScripts.js"></script>
 </body>
