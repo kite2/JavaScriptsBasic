@@ -82,3 +82,41 @@ function phepNhan() {
     ketQua = soThu1 * soThu2;
     document.getElementById('inKetQua').innerHTML="Result Multiplication: "+ ketQua;
 }
+
+function ngon() {
+    var ngon = document.getElementById('ngon');
+    var bo = document.getElementById('bo');
+    var re = document.getElementById('re');
+    if (ngon.checked==true){
+        if (bo.checked==true){
+            if (re.checked==true){
+                document.getElementById('bo').checked = false;
+            }
+        }
+    }
+}
+function bo() {
+    var ngon = document.getElementById('ngon');
+    var bo = document.getElementById('bo');
+    var re = document.getElementById('re');
+    if (bo.checked == true) {
+        if (re.checked == true) {
+            if (ngon.checked == true) {
+                document.getElementById('re').checked = false;
+            }
+        }
+    }
+}
+
+function re() {
+    var ngon = document.getElementById('ngon');
+    var bo = document.getElementById('bo');
+    var re = document.getElementById('re');
+    if (re.checked == true) {
+        if (ngon.checked == true) {
+            if (bo.checked == true) {
+                document.getElementById('ngon').checked = false;
+            }
+        }
+    }
+}

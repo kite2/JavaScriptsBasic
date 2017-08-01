@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap cau lenh dieu kien</title>
+</head>
+<body>
+<div>
+<h1 style="position: absolute; top: 100px; left: 200px;">Do You Love Me</h1>
+<input style="position: absolute; top: 170px; left: 255px;" value="Yes" onclick="dongY()" type="button">
+<input style="position: absolute; top: 170px; left: 315px;" value="No" onmouseover="khong()" type="button" id="btkhong">
+</div>
+<div style="top: 200px; position: absolute; height: 260px">
+    <h1 align="center">Đánh chữ</h1>
+    <form name="form1">
+        <textarea name="txt" cols="40" rows="10" onkeydown="tuDongGo()" placeholder="Gõ phím thôi" id="autoText" ></textarea>
+    </form>
+</div>
+<div style="width: 800px">
+    <h1>Xem số ngày trong tháng</h1>
+    <form>
+        <input type="text" id="nhapThang" placeholder="Nhập Tháng">
+        <input type="button" onclick="tinhSoNgay()" value="Tính Số Ngày">
+        <p id="inSoNgay" style=""></p>
+    </form>
+</div>
+<div id="bang" style="width: 700px; height: 1200px; margin-left: 500px; background-color: white" >
+    <div style="width: 500px; height: 300px;">
+        <img id="img1" src="../img/anh-ghep-1.jpg" height="200" width="300" onclick="chuyenHinh1()" usemap="#mapClick">
+    </div>
+    <div style="width: 500px; height: 300px; margin-top: -100px">
+        <img id="img2" src="../img/anh-ghep-2.jpg" height="200" width="300" onclick="chuyenHinh2()" usemap="#mapClick">
+    </div>
+    <div style="width: 500px; height: 300px; margin-top: -100px">
+        <img id="img3" src="../img/anh-ghep-3.jpg" height="200" width="300" onclick="chuyenHinh3()" usemap="#mapClick">
+    </div>
+    <map name="mapClick">
+        <area shape="rect">
+    </map>
+</div>
+
+<script src="../js/JavaScripts-bai-tap-cau-lenh-dieu-kien.js"></script>
+</body>
+</html>
