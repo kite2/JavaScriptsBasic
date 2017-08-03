@@ -33,8 +33,51 @@ function dich() {
     document.getElementById('daDich').innerHTML=tuDaDich;
     }
 }
+var soThuTu = 1;
+var soThuTuDongXoa = 1;
+function nhapSanPham() {
 
-function kiemTra() {
-    for( count = 0; count <= 5; count++ ){ }
-    document.getElementById('ketQua').innerHTML = count;
+    var tenSanPham = document.getElementById('tenSanPham').value;
+    var dongMoi = document.createElement("TR");
+    dongMoi.setAttribute("id", soThuTu);
+    document.getElementById("bangSanPham").appendChild(dongMoi);
+    for (i = 0; i < 3; i++) {
+        var cotMoi = document.createElement("TD");
+        dongMoi.appendChild(cotMoi);
+        if (i == 0) {
+            var vietSoThuTu = document.createTextNode(soThuTu);
+            cotMoi.appendChild(vietSoThuTu)
+        }
+        if (i == 1) {
+            var vietTenSanPham = document.createTextNode(tenSanPham);
+            cotMoi.appendChild(vietTenSanPham);
+        }
+        if (i == 2) {
+            var taoNutXoa = document.createElement("INPUT")
+            taoNutXoa.setAttribute("type","button");
+            taoNutXoa.setAttribute("onclick", "xoa("+ soThuTuDongXoa +")");
+            taoNutXoa.setAttribute("value", "Xóa");
+            cotMoi.appendChild(taoNutXoa)
+        }
+
+    }
+    soThuTu += 1;
+    soThuTuDongXoa += 1;
+}
+
+function xoa(a) {
+    for (i = 0; i < document.getElementById("bangSanPham").getElementsByTagName("TR").length;i++) {
+        for (j = 0; j < 3 ; j++) {
+            if (j == 0) {
+                if (a == document.getElementById("bangSanPham")) {
+                    var x = document.getElementById("bangSanPham");
+                    x.deleteRow(i)
+                }
+            }
+        }
+    }
+        soThuTuDongXoa -= 1;
+        soThuTu -= 1;
+        console.log("so thu tu dong xoa" + soThuTuDongXoa);
+        console.log("danh dau xoa" + danhDauXoa);
 }
